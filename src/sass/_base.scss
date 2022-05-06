@@ -1,0 +1,65 @@
+// В этот файл ничего не пишем!!! Пользуемся visuali-hidden
+
+// Это шрифты с их семействами
+//     font-family: 'DM Sans', sans-serif; => установлен на body
+//     font-family: 'Titan One', cursive;
+
+* {
+    box-sizing: border-box;
+  }
+  
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+  
+  ul,
+  li {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  body {
+    margin: 0px;
+    
+    // наиболее используемый шрифт
+    font-family: "DM Sans", sans-serif; 
+    font-weight: 400;
+    font-size: 12px;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  .container {
+    margin: 0px auto;
+
+    min-width: 280px;
+    max-width: 480px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  
