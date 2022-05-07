@@ -1,1 +1,57 @@
 // В этом файле работает Таня
+.statistics{
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 80px;
+    width: 100%;
+    background-color: #FFF5F6;
+}
+
+.statistics__item{
+    max-width: 270px;
+}
+
+.statistics__item::before{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 16px;
+    content: url(../images/milk.png);
+    background-color: transparent;
+    background-repeat: no-repeat;   
+}
+
+.statistics__item-milk::before{
+
+    background-image: url(../images/milk.png);
+}
+
+.statistics__item-yogurt::before {
+    background-image: url(../images/yogurt.png);
+}
+
+.statistics__item-lolly::before{
+    background-image: url(../images/lolly.png);
+}
+
+.statistics__title{
+    margin-bottom: 25px;
+
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $accentColor;
+}
+
+.statistics__text{
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #000000;
+}
