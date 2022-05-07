@@ -74,6 +74,10 @@
 .adrress__label {
   display: inline-block;
   margin-bottom: 20px;
+
+  @include mq(tablet) {
+    margin-bottom: 32px;
+  }
   padding: 4px 25px;
 
   color: $fontWhite;
@@ -84,7 +88,7 @@
   // align-items: center;
   // text-align: center;
 
-  background-color: #c2e297;
+  background-color: #f0d1a5;
   border-radius: 4px;
 }
 .address__title {
