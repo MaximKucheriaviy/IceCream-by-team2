@@ -13,22 +13,12 @@
     max-width: 270px;
 }
 
-// .statistics__item::before{
-//     display: block;
-//     width: 100%;
-//     height: 100%;
-//     margin-bottom: 16px;
-//     content: '';
-//     background-color: transparent;
-//     background-repeat: no-repeat;   
-// }
-
 .statistics__item-milk::before{
     display: block;
     width: 100%;
     height: 100%;
     margin-bottom: 16px;
-    content: url(../images/milk.png);
+    content: url(../images/production-count/milk.png);
     background-color: transparent;
     background-repeat: no-repeat;
 }
@@ -38,7 +28,7 @@
     width: 100%;
     height: 100%;
     margin-bottom: 16px;
-    content: url(../images/yogurt.png);
+    content: url(../images/production-count/yogurt.png);
     background-color: transparent;
     background-repeat: no-repeat;
 }
@@ -48,7 +38,7 @@
     width: 100%;
     height: 100%;
     margin-bottom: 16px;
-    content: url(../images/lolly.png);
+    content: url(../images/production-count/lolly.png);
     background-color: transparent;
     background-repeat: no-repeat;
 }
@@ -70,5 +60,5 @@
     font-weight: 700;
     font-size: 12px;
     line-height: 1.7;
-    color: #000000;
+    color: $fontBlack;
 }
