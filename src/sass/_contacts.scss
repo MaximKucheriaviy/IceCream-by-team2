@@ -178,6 +178,8 @@
 }
 
 .button-contacts {
+  display: flex;
+  align-items: center;
   border: none;
   border-radius: 22px;
   font-weight: 700;
@@ -190,10 +192,14 @@
   background-color: $fontWhite;
 
   padding: 17px 32px;
+  width: 161px;
+  height: 44px;
   @include mq(tablet) {
+    width: 174px;
     padding: 17px 38px;
   }
   @include mq(desktop) {
+    width: 180px;
     padding: 17px 39px;
   }
 }
@@ -207,13 +213,15 @@
 
 .button-contacts--red {
   color: $fontWhite;
-  background-color: $accentColor;
+  background-color: #d41342;
   padding: 17px;
 
   @include mq(tablet) {
     padding: 17px 34px 17px 30px;
+    width: 191px;
   }
   @include mq(desktop) {
+    width: 198px;
     padding: 17px 35px;
   }
 }
