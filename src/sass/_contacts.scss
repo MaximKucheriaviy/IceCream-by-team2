@@ -61,12 +61,19 @@
 .adrress__label {
   display: inline-block;
 
-  padding: 4px 24px;
+  padding: 0 25px;
+  font-size: 12px;
+
   background-color: #f0d1a5;
   margin-bottom: 20px;
   @include mq(tablet) {
     margin-bottom: 32px;
+    padding: 0 16px;
+    font-size: 16px;
     border-radius: 6px;
+  }
+  @include mq(desktop) {
+    padding: 0 17px;
   }
 
   color: $fontWhite;
@@ -75,17 +82,29 @@
 }
 .adrress__label--beige {
   background-color: #c2e297;
-  padding: 4px 28px;
+  padding: 0px 28px;
+  @include mq(tablet) {
+    padding: 0px 17px;
+  }
+  @include mq(desktop) {
+    padding: 0 16px;
+  }
 }
 
 .address__title {
   color: $fontBlack;
+  margin-bottom: 8px;
+  @include mq(tablet-only) {
+    margin-bottom: 12px;
+  }
 }
 
 .address__text {
   line-height: 1.5;
+  margin-bottom: 24px;
   @include mq(tablet) {
     line-height: 1.83;
+    margin-bottom: 32px;
   }
 }
 .addrees__line {
@@ -94,25 +113,13 @@
   border-bottom: 1px solid #e1e1e1;
 }
 
-.address__list {
+.address__box {
   margin-bottom: 24px;
   @include mq(tablet) {
     margin-bottom: 32px;
   }
 }
 
-.address__item:first-child {
-  margin-bottom: 8px;
-  @include mq(tablet-only) {
-    margin-bottom: 12px;
-  }
-}
-.address__item:nth-child(2) {
-  margin-bottom: 24px;
-  @include mq(tablet) {
-    margin-bottom: 32px;
-  }
-}
 .time-list {
   margin-bottom: 24px;
   @include mq(tablet) {
