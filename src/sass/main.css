@@ -193,7 +193,7 @@ header {
 .herro__img {
   position: absolute;
   top: 92px;
-  left: 117px;
+  right: 32px;
   z-index: 2;
 }
 
@@ -201,7 +201,7 @@ header {
   position: absolute;
   display: inline-block;
   top: 83px;
-  left: 36px;
+  right: -62px;
   width: 346px;
   height: 344px;
   border-radius: 50%;
