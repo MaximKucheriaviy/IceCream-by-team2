@@ -79,8 +79,8 @@
     padding-top: 32px;
 }
 
-.ice-cream__text{
-    width: 200px;
+.ice__text{
+    width: 100%;
     height: 124px;
     font-family: 'DM Sans';
     font-style: normal;
@@ -91,4 +91,45 @@
     letter-spacing: 0.04em;
     color: #FFFFFF;
     padding-top: 70px;
+    padding-right: 39px;
+    padding-left: 41px;
 }
+
+.products__ice-cream__background{
+    width: 100%;
+}
+
+.products__ice-coffee__background{
+    width: 100%;
+}
+
+.products__milkshakes__background{
+    width: 100%;
+}
+
+.ice-coffee{
+    height: 23px;
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.milkshakes{
+    height: 23px;
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
