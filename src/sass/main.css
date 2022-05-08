@@ -134,6 +134,7 @@ header {
 }
 
 .title-container {
+  display: inline-block;
   position: relative;
   z-index: 3;
   padding-top: 194px;
@@ -206,7 +207,6 @@ header {
   border-radius: 50%;
   background-color: rgb(255, 165, 186);
   z-index: 1;
-  overflow: hidden;
 }
 
 .products {
