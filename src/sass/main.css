@@ -115,6 +115,11 @@ body {
 }
 
 /* Стили для кнопки закрытия */
+header {
+  position: absolute;
+  top: 0;
+}
+
 .herro {
   width: 100%;
   height: 100vh;
@@ -201,6 +206,7 @@ body {
   border-radius: 50%;
   background-color: rgb(255, 165, 186);
   z-index: 1;
+  overflow: hidden;
 }
 
 .products {
