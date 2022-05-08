@@ -44,20 +44,26 @@
 }
 
 .about__descr {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.62;
+  &-container {
+    width: 220px;
+  }
 
   &-title {
     margin-bottom: 40px;
-    max-width: 220px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
 
     color: $fontBlack;
   }
 
   &-text {
     margin-bottom: 20px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
 
     color: $fontGray;
   }
