@@ -66,31 +66,20 @@
    
 }
 
-.mobile-nav__list{
-   justify-content: left;
-   
-      
-    
-        
-    
-       
-    
-        &:hover {
-            color: #2196f3;
-            ;
-    
-        }
-    
-    
-        &:focus {
-            color: #2196f3;
-            ;
-        }
+.mobile-nav__link{  
+    &:hover,
+    &:focus{
+        color:$accentColor;
+    }
 }
 
 
 .mobile__button{
-    display: block;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
@@ -101,6 +90,20 @@
     background-color: #FFFFFF;
     border: none;
     
+    
+    & svg{
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        margin-left: 16px;
+        stroke: $accentColor;
+
+
+        & use{
+            display: block;
+        }
+    }
 }
 
 .mobile__text{
@@ -108,11 +111,7 @@
        
         font-weight: 700;
         font-size: 16px;
-        line-height: 21px;
-       
-        align-items: center;
-        text-align: center;
-    
+        line-height: 21px;    
         color: #D41443;
 }
 

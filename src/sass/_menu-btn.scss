@@ -12,8 +12,6 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
-       
-    
 }
 
 
@@ -29,8 +27,8 @@
     stroke: $accentColor;
     position: absolute;
     top: 27px;
-    right: -20px;
+    right: 20px;
     outline: none;
-    z-index: 50;
+    z-index: 2;
 
 }
