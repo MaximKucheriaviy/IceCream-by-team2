@@ -34,7 +34,6 @@
     position: relative;
     width: 280px;
     height: 489px;
-    left: 20px;
     background: #FFB8CA;
     border-radius: 24px;
     margin-top: 148px;
@@ -44,7 +43,6 @@
     position: relative;
     width: 280px;
     height: 489px;
-    left: 20px;
     background: #F0D1A5;
     border-radius: 24px;
     margin-top: 148px;
@@ -54,7 +52,6 @@
     position: relative;
     width: 280px;
     height: 489px;
-    left: 20px;
     background: #C2E297;
     border-radius: 24px;
     margin-top: 148px;
@@ -150,11 +147,18 @@
 
 .ice-img{
 position: absolute;
+left: 45%;
+transform: translateY(350%);
 width: 40px;
 height: 40px;
 border-radius: 50%;
 background-color:#FFFFFF;
-
+display: flex;
+align-items: center;
+justify-content: center;
+& svg{
+    fill: $accentColor;
+}
 }
 
 .ice-cream-img{
