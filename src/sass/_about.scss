@@ -5,7 +5,7 @@
 
   background-color: #fff5f6;
   background-image: url(../images/about/img/about-bg-img_sm.png);
-  background-position-y: 40%;
+  background-position: 0 574px;
   background-size: contain;
   background-repeat: no-repeat;
 
@@ -44,14 +44,16 @@
 }
 
 .about__descr {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.62;
+  &-container {
+    width: 220px;
+  }
 
   &-title {
     margin-bottom: 40px;
-    max-width: 220px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
 
     color: $fontBlack;
   }
@@ -59,7 +61,16 @@
   &-text {
     margin-bottom: 20px;
 
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+
     color: $fontGray;
+  }
+
+  &-text-part {
+    display: inline-block;
+    margin-top: 20px;
   }
 }
 
@@ -75,21 +86,23 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.28;
-  //   display: flex;
-  align-items: center;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 
   color: $accentColor;
   background-color: $fontWhite;
   border-radius: 22px;
   border-color: transparent;
 
-  // &__arrow {
-  //   width: 5px;
-  //   height: 8px;
-  //   background-image: url(../images/about/icons/btn-arrow.png);
-  //   border: 2px solid #d41443;
-  // }
+  &__text {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &__arrow {
+    stroke: $accentColor;
+  }
 }
 
 // ABOUT-LIST
