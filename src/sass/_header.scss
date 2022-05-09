@@ -1,6 +1,12 @@
-
-// В этом файле работает Юра
-header {
-  position: absolute;
-  top: 0;
+.header{
+    display: block;
+    position: absolute;
+    
 }
+
+.header__link{
+    display: inline-block;
+    padding-top: 8px;
+    
+}
+

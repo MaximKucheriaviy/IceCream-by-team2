@@ -45,8 +45,7 @@ body {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -66,6 +65,12 @@ body {
 @media screen and (min-width: 1300px) {
   .container {
     max-width: 1300px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 
@@ -115,19 +120,21 @@ body {
 }
 
 /* Стили для кнопки закрытия */
-header {
+.header {
+  display: block;
   position: absolute;
-  top: 0;
 }
 
+.header__link {
+  display: inline-block;
+  padding-top: 8px;
+}
 
 .herro {
   width: 100%;
-  height: 100vh;
-
+  height: 502px;
   margin-left: auto;
   margin-right: auto;
-
   background-color: rgb(255, 184, 202);
   overflow: hidden;
 }
@@ -138,18 +145,6 @@ header {
 
 .title-container {
   display: inline-block;
-  position: relative;
-  z-index: 3;
-  padding-top: 194px;
-}
-
-.herro__container {
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.title-container {
   position: relative;
   z-index: 3;
   padding-top: 194px;
@@ -179,13 +174,13 @@ header {
 
 .herro__first-btn {
   display: inline-block;
-  padding: 10px 25px;
+  padding: 7px 14px;
   color: #fff;
   background-color: #D41443;
   border: none;
   border-radius: 20px;
-  font-family: DM Sans;
-  font-weight: normal;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
   font-size: 8px;
   line-height: 1.25;
   text-align: center;
@@ -193,7 +188,7 @@ header {
 
 .herro__second-btn {
   display: inline-block;
-  padding: 10px 25px;
+  padding: 7px 14px;
   color: #D41443;
   background-color: #fff;
   border: none;
@@ -208,19 +203,13 @@ header {
 .herro__img {
   position: absolute;
   top: 92px;
-
-  left: 117px;
-
   right: 32px;
-
   z-index: 2;
 }
 
 .ice-cream__background {
   position: absolute;
-
   display: inline-block;
-
   top: 83px;
   right: -62px;
   width: 346px;
@@ -261,36 +250,37 @@ header {
 }
 
 .products__ice-cream__background {
+  position: relative;
   width: 280px;
   height: 489px;
   left: 20px;
-  top: 802px;
   background: #FFB8CA;
   border-radius: 24px;
-  margin-top: 140px;
+  margin-top: 148px;
 }
 
 .products__ice-coffee__background {
+  position: relative;
   width: 280px;
   height: 489px;
   left: 20px;
-  top: 1431px;
   background: #F0D1A5;
   border-radius: 24px;
-  margin-top: 140px;
+  margin-top: 148px;
 }
 
 .products__milkshakes__background {
+  position: relative;
   width: 280px;
   height: 489px;
   left: 20px;
-  top: 2060px;
   background: #C2E297;
   border-radius: 24px;
-  margin-top: 140px;
+  margin-top: 148px;
 }
 
 .ice-cream {
+  padding-top: 160px;
   height: 23px;
   font-family: "Titan One";
   font-style: normal;
@@ -309,8 +299,20 @@ header {
   padding-top: 32px;
 }
 
-.ice-cream__text {
-  width: 200px;
+.ice-coffee::after {
+  content: "...";
+  display: block;
+  padding-top: 32px;
+}
+
+.milkshakes::after {
+  content: "...";
+  display: block;
+  padding-top: 32px;
+}
+
+.ice__text {
+  width: 100%;
   height: 124px;
   font-family: "DM Sans";
   font-style: normal;
@@ -320,7 +322,86 @@ header {
   text-align: center;
   letter-spacing: 0.04em;
   color: #FFFFFF;
-  padding-top: 70px;
+  padding-top: 113px;
+  padding-right: 39px;
+  padding-left: 41px;
+}
+
+.products__ice-cream__background {
+  width: 100%;
+}
+
+.products__ice-coffee__background {
+  width: 100%;
+}
+
+.products__milkshakes__background {
+  width: 100%;
+}
+
+.ice-coffee {
+  padding-top: 160px;
+  height: 23px;
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.milkshakes {
+  padding-top: 160px;
+  height: 23px;
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.ice-img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.ice-cream-img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%) translateY(-100%);
+  top: 140px;
+}
+
+.ice-coffee-img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%) translateY(-100%);
+  top: 140px;
+}
+
+.ice-milkshakes {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%) translateY(-100%);
+  top: 140px;
+}
+
+.ice-other {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: 147px;
+  top: 2275px;
 }
 
 .about {
@@ -328,7 +409,7 @@ header {
   padding-bottom: 40px;
   background-color: #fff5f6;
   background-image: url(../images/about/img/about-bg-img_sm.png);
-  background-position-y: 40%;
+  background-position: 0 574px;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -344,6 +425,9 @@ header {
 }
 .about__title {
   margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
   font-family: "Titan One";
   font-style: normal;
   font-size: 34px;
@@ -354,39 +438,55 @@ header {
   color: #D41443;
 }
 .about__img {
-  margin: 0 auto 40px;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
-.about__descr {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.62;
+.about__descr-container {
+  width: 220px;
 }
 .about__descr-title {
   margin-bottom: 40px;
-  max-width: 220px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
   color: #000000;
 }
 .about__descr-text {
   margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
   color: #907E82;
+}
+.about__descr-text-part {
+  display: inline-block;
+  margin-top: 20px;
 }
 
 .about-btn {
-  padding: 17px 37px;
+  outline: 1px solid green;
+  margin-top: 64px;
   min-width: 176px;
-  height: auto;
+  height: 44px;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.28;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
   color: #D41443;
   background-color: #FFFFFF;
   border-radius: 22px;
   border-color: transparent;
+}
+.about-btn__text {
+  display: inline-block;
+  margin-right: 10px;
+}
+.about-btn__arrow {
+  stroke: #D41443;
 }
 
 .statistics {
@@ -453,9 +553,18 @@ header {
 }
 
 .contacts {
-  padding-top: 48px;
-  padding-bottom: 48px;
   background-image: linear-gradient(to bottom, #ffffff 25%, #fff5f6 25%);
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .contacts {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .contacts {
+    margin-bottom: 120px;
+  }
 }
 
 .link {
@@ -658,9 +767,7 @@ header {
   text-align: center;
   color: #D41443;
   background-color: #FFFFFF;
-  padding: 17px 32px;
   width: 161px;
-  height: 44px;
 }
 @media screen and (min-width: 768px) {
   .button-contacts {
@@ -673,6 +780,14 @@ header {
     width: 180px;
     padding: 17px 39px;
   }
+}
+
+.button-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 161px;
+  height: 44px;
 }
 
 .contacts-button__item:not(:last-child) {
@@ -688,7 +803,6 @@ header {
 .button-contacts--red {
   color: #FFFFFF;
   background-color: #d41342;
-  padding: 17px;
 }
 @media screen and (min-width: 768px) {
   .button-contacts--red {
@@ -713,6 +827,19 @@ header {
 .button-contacts--white:focus {
   background-color: #ecebeb;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-button__icon {
+  margin-left: 8px;
+  padding-top: 3px;
+}
+
+.contacts-button__icon--white {
+  stroke: #FFFFFF;
+}
+
+.contacts-button__icon--red {
+  stroke: #f44336;
 }
 
 .footer__title {
@@ -781,21 +908,47 @@ header {
   border-top: 1px solid #E1E1E1;
 }
 
-.mobile-menu {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100wh;
-  z-index: 99;
+  height: 100vh;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-.mobile-nav {
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-btn.is-active .mobile_buttom-open {
+  opacity: 1;
+}
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
   width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: #E18298;
   padding: 20px;
   position: relative;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
 }
 
 .mobile-nav__list {
@@ -845,23 +998,31 @@ header {
   margin-bottom: 23px;
 }
 
-.menu-btn {
+.modal__cross {
   display: block;
   width: 14px;
   height: 14px;
   background-color: transparent;
   border: transparent;
   outline: transparent;
-  stroke: white;
+  stroke: #FFFFFF;
   position: absolute;
   top: 20px;
   right: 20px;
+  cursor: pointer;
 }
 
-.mobile_buttom-open {
-  opacity: 0;
-}
-
-.mobile_buttom-close {
-  opacity: 1;
+.menu-btn-open {
+  display: block;
+  width: 20px;
+  height: 12px;
+  background-color: transparent;
+  border: transparent;
+  outline: transparent;
+  stroke: #D41443;
+  position: absolute;
+  top: 27px;
+  right: -20px;
+  outline: none;
+  z-index: 50;
 }/*# sourceMappingURL=main.css.map */
