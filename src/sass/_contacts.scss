@@ -196,7 +196,7 @@
   color: $accentColor;
   background-color: $fontWhite;
 
-  padding: 17px 32px;
+  
   width: 161px;
 
   @include mq(tablet) {
@@ -211,8 +211,10 @@
 .button-contacts {
   display: flex;
   align-items: center;
-  text-align: center;
-  justify-self: center;
+  justify-content: center;
+
+  min-width: 161px;
+  height: 44px;
 }
 
 .contacts-button__item:not(:last-child) {
@@ -226,7 +228,6 @@
 .button-contacts--red {
   color: $fontWhite;
   background-color: #d41342;
-  padding: 17px;
 
   @include mq(tablet) {
     padding: 17px 34px 17px 30px;
