@@ -1,8 +1,13 @@
 // В этом файле работает Даниил
 .contacts {
-  padding-top: 48px;
-  padding-bottom: 48px;
   background-image: linear-gradient(to bottom, #ffffff 25%, #fff5f6 25%);
+  margin-bottom: 40px;
+  @include mq(tablet) {
+    margin-bottom: 40px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 120px;
+  }
 }
 .link {
   color: inherit;
@@ -191,9 +196,9 @@
   color: $accentColor;
   background-color: $fontWhite;
 
-  padding: 17px 32px;
+  
   width: 161px;
-  height: 44px;
+
   @include mq(tablet) {
     width: 174px;
     padding: 17px 38px;
@@ -203,6 +208,15 @@
     padding: 17px 39px;
   }
 }
+.button-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 161px;
+  height: 44px;
+}
+
 .contacts-button__item:not(:last-child) {
   margin-bottom: 10px;
   @include mq(tablet) {
@@ -214,7 +228,6 @@
 .button-contacts--red {
   color: $fontWhite;
   background-color: #d41342;
-  padding: 17px;
 
   @include mq(tablet) {
     padding: 17px 34px 17px 30px;
@@ -236,3 +249,20 @@
   background-color: #ecebebff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.contacts-button__icon {
+  margin-left: 8px;
+  padding-top: 3px;
+}
+
+.contacts-button__icon--white {
+  stroke: $fontWhite;
+}
+.contacts-button__icon--red {
+  stroke: #f44336;
+}
+// .contacts-button__icon {
+//   width: 6x;
+//   height: 8px;
+//
+// }
