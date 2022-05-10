@@ -2,11 +2,22 @@
 .statistics{
     margin-left: auto;
     margin-right: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 80px;
     width: 100%;
     background-color: #FFF5F6;
+
+    @include mq(mobile-only) {
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-bottom: 80px;
+        }
+    
+        @include mq(tablet-only) {
+            padding-bottom: 84px;
+        }
+    
+        @include mq(desktop) {
+            padding-bottom: 120px;
+        }
 }
 
 .statistics__list{
@@ -80,4 +91,8 @@
     font-size: 12px;
     line-height: 1.7;
     color: $fontBlack;
+}
+
+.statistics__text:last-child{
+    margin-bottom: 0;
 }
