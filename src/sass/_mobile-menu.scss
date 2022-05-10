@@ -71,6 +71,8 @@
     &:focus{
         color:$accentColor;
     }
+
+    
 }
 
 
@@ -104,6 +106,18 @@
             display: block;
         }
     }
+
+        @include mq(tablet) {
+            width: 186px;
+            height: 44px;
+            margin-top: 58px;
+            margin-bottom: 34px;
+    
+        }
+
+
+
+
 }
 
 .mobile__text{
@@ -140,8 +154,16 @@
     // }  
 }
 
+.mobile-nav__list{
+    text-align: left;
+   
+}
+
 .mobile-nav__item{
     margin-bottom: 23px;
+    
 }
+
+
 
 
