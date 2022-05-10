@@ -1,0 +1,34 @@
+.modal__cross{
+    display: block;
+    width: 14px;
+    height: 14px;
+        
+    
+    background-color: transparent;
+    border: transparent;
+    outline: transparent;
+    stroke: $fontWhite;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+
+
+.menu-btn-open{
+    display: block;
+    width: 20px;
+    height: 12px;
+    background-color: transparent;
+    border: transparent;
+    outline: transparent;
+    stroke: $accentColor;
+    position: absolute;
+    top: 27px;
+    right: 20px;
+    outline: none;
+    z-index: 2;
+
+}

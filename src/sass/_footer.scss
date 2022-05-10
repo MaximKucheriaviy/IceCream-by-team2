@@ -1,8 +1,17 @@
 // В этом файле работает Дима Шегельский
 
-
+.footer {
+    background-color: #FFF5F6;
+}
+.footer-container {
+    @include mq(tablet) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
 .footer__title {
-    margin-top: 48px;
+    display: block;
+    width: 232px;
     margin-bottom: 14px;
 
     font-family: 'Titan One';
@@ -19,13 +28,28 @@
     line-height: 39px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-
     color: #D41443;
+    @include mq(mobile-only){
+        display: block;
+        width: 200px;
+    }
+
+    @include mq(tablet){
+        font-size: 48px;
+        line-height: 1.14;
+        width: 340px;
+    }
+    
+}
+.social-media {
+    margin-bottom: 40px;
+    @include mq(mobile-only) {
+        margin-top: 40px;
+    }
 }
 .social-media__list{
     display: flex;
     justify-content: flex-end;
-    margin: 40px 0;
 }
 
 .social-media__link {
@@ -38,11 +62,17 @@
     border-radius: 50%;
     background-color: #FEA5BB;
 }
+.social-media__link:hover {
+    background-color:#D41443;
+}
 
 .social-media__item:not(:last-child) {
     margin-right: 28px;
 }
 
+.social-media__icon {
+    fill: #FFF;
+}
 .contact {
     margin-bottom: 40px;
     font-family: 'DM Sans';
@@ -59,16 +89,24 @@
 }
 
 .wrapper {
-    padding: 16px 20px 20px 20px;
-    max-width: 480px;
-
-    font-family: 'DM Sans';
+    font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.5;
-    text-align: center;
+    // text-align: center;
     
     color: #907E82;
     border-top: 1px solid #E1E1E1;
+    
+}
+
+.rights-reserved {
+    display: block;
+    text-align: center;
+    
+    @include mq(mobile-only) {
+        width: 140px;
+        margin: 16px auto 0;
+    }
     
 }

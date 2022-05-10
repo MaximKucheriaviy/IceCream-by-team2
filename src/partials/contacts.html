@@ -1,6 +1,6 @@
 <!-- В этом файле работает Даниил -->
-<section class="contacts contacts-section">
-  <div class="container">
+<section class="contacts">
+  <div class="container contacts-container">
     <h2 class="visually-hidden">Contacts</h2>
     <ul class="contacts__list">
       <!-- первая карточка -->
@@ -113,12 +113,18 @@
     <ul class="contacts-button__list">
       <li class="contacts-button__item">
         <button class="button-contacts button-contacts--red" type="button">
-          Our Locations &rsaquo;
+          Our Locations
+          <svg class="contacts-button__icon contacts-button__icon--white" width="10" height="11">
+            <use href="/images/icons.svg#icon-arrow1"></use>
+          </svg>
         </button>
       </li>
       <li class="contacts-button__item">
         <button class="button-contacts button-contacts--white" type="button">
-          Franchise &rsaquo;
+          Franchise
+          <svg class="contacts-button__icon contacts-button__icon--red" width="10" height="11">
+            <use href="/images/icons.svg#icon-arrow1"></use>
+          </svg>
         </button>
       </li>
     </ul>
