@@ -9,17 +9,35 @@
         justify-content: space-between;
     }
 }
+.wrapper-title {
+    @include mq(tablet-only) {
+        margin-bottom: 40px;
+    }
+}
 .footer__title {
-    display: block;
-    width: 232px;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 
     font-family: 'Titan One';
     font-size: 18px;
-    line-height: 21px;
+    line-height: 1.16;
     text-transform: uppercase;
     
     color: #FFA5BA;
+    @include mq(mobile-only) {
+        display: block;
+        width: 232px;
+    }
+    @include mq(tablet-only) {
+        width: 340px;
+        margin-bottom: 12px;
+        font-size: 26px;
+        letter-spacing: 0.04em;
+    }
+    @include mq(desktop) {
+        font-size: 30px;
+        line-height: 1.13;
+        letter-spacing: 0.04em;
+    }
 }
 
 .footer__subtitle {
@@ -34,12 +52,21 @@
         width: 200px;
     }
 
-    @include mq(tablet){
+    @include mq(tablet-only){
         font-size: 48px;
         line-height: 1.14;
         width: 340px;
     }
-    
+    @include mq(desktop) {
+        font-size: 58px;
+        letter-spacing: 0.06em;
+    }
+}
+
+.wrapper-contact {
+    @include mq(desktop) {
+        margin-bottom: 60px;
+    }
 }
 .social-media {
     margin-bottom: 40px;
@@ -61,6 +88,10 @@
     height: 32px;
     border-radius: 50%;
     background-color: #FEA5BB;
+    @include mq(tablet) {
+        width: 34px;
+        height: 34px;
+    }
 }
 .social-media__link:hover {
     background-color:#D41443;
@@ -82,6 +113,13 @@
     text-align: right;
     
     color: #000000;
+
+    @include mq(tablet) {
+        font-size: 14px;
+    }
+    @include mq(desktop) {
+        font-size: 16px;
+    }
 }
 .contact__link {
     text-decoration: none;
@@ -103,10 +141,12 @@
 .rights-reserved {
     display: block;
     text-align: center;
+    margin: 8px 0;
     
     @include mq(mobile-only) {
         width: 140px;
-        margin: 16px auto 0;
+        margin: 16px auto 20px;
     }
+
     
 }
