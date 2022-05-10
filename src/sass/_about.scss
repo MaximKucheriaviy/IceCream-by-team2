@@ -216,6 +216,11 @@
   border-radius: 22px;
   border-color: transparent;
 
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+
   &__text {
     display: inline-block;
     margin-right: 10px;
