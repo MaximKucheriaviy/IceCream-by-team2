@@ -27,7 +27,7 @@
     height: 308px;
     background-color: #fafafa;
     margin-top: 29px;
-    flex-direction: column;
+    // flex-direction: column;
     align-items: center;
     justify-content: center;
     
@@ -55,21 +55,9 @@
         background-image: repeating-linear-gradient(180deg, transparent 1px, transparent 30px, #e1e1e1 31px);
     
     }
-
     @media screen and (min-width: 768px) {
         width: 500px;
     }
-}
-
-.reviews__underline-block::before{
-    position: absolute;
-    top:0;
-    left:0;
-    width: 54px;
-    height: 40px;
-    content: url(../images/icons.svg#icon-comas);
-    fill: #E1E1E1;
-    
 }
 
 .reviews__block-text {
@@ -78,6 +66,7 @@
     text-align: center;
     width: 157px;
     height: 248px;
+    z-index: 3;
     @media screen and (min-width: 768px) {
         width: 460px;
         height: 93px;
@@ -86,6 +75,19 @@
         letter-spacing: 0.04em;
     }
 }
+
+.reviews__underline-block::before{
+    position: absolute;
+    top: 15px;
+    left: 53px;
+    width: 54px;
+    height: 40px;
+    content: url(../images/comas.svg);
+    z-index:2 ;
+
+
+}
+
 .reviews__text {
     text-align: center;
     margin-top: 36px;
