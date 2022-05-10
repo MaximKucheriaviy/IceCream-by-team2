@@ -5,4 +5,5 @@ $('.reviews__list').slick({
   slidesToShow: 1,
   adaptiveHeight: true,
   arrows: false
+  
 });
