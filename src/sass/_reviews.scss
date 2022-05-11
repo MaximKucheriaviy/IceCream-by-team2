@@ -32,7 +32,6 @@
     height: 308px;
     background-color: #fafafa;
     margin-top: 29px;
-    // flex-direction: column;
     align-items: center;
     justify-content: center;
     
@@ -62,20 +61,11 @@
     }
 
     @include mq(tablet) {
-        top: 30px;
-        left: 15px;
-        width: 60px;
-        height: 40px;
-    }
-
-    @include mq(tablet) {
         top: 32px;
         left: 132px;
         width: 60px;
         height: 40px;
     }
-
-
 
 }
 
