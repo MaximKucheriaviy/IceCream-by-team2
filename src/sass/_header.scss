@@ -1,5 +1,5 @@
 .header{
-    position: relative;
+    position: absolute;
 
     display: block;
     padding-top: 8px;
@@ -11,10 +11,10 @@
     & .container{
         max-width: none;
         @include mq(tablet) {
-            max-width: 704px;
+            width: 100%;
         }
-        @include mq(desctop) {
-            max-width: 704px;
+        @include mq(desktop) {
+            width: 1280px;
         }
     }
 }
@@ -30,8 +30,7 @@
 
     @include mq(tablet) {
         padding: 0;            
-    }
-    
+    }    
 }
 
 .header_nav{
@@ -61,6 +60,7 @@
         border-radius: 22px;
         background-color: #FFFFFF;
         border: none;
+        margin-left: 32px;
         
         
         & svg {
