@@ -128,3 +128,59 @@
     line-height: 1.86;
    
 }
+
+.slick-dots {
+    margin-bottom: 40px;
+
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-top: 30px;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+
+    display: inline-block;
+    margin: auto;
+    border-radius: 50%;
+
+    width: 12px;
+    height: 12px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    //background: transparent;
+}
+
+.slick-dots li.slick-active {
+    width: 12px;
+    height: 12px;
+    top: 4px;
+    background-image: url(../../src\images\Frame.svg);
+}
+
+.slick-dots li.slick-active button {
+    background: transparent;
+    z-index: -1;
+}
