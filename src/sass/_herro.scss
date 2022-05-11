@@ -5,13 +5,15 @@
 
   background-color: rgb(255, 184, 202);
   overflow: hidden;
-
-  // @include mq(tablet) {
-  //   height: 416px;
-  // }
+  @include mq(tablet) {
+    height: 100%;
+  }
 }
 .herro__container {
   position: relative;
+  @include mq(tablet) {
+    height: 416px;
+  }
 }
 .title-container {
   display: inline-block;
@@ -34,6 +36,11 @@
   color: $fontWhite;
   text-transform: uppercase;
   margin-bottom: 20px;
+
+  @include mq(tablet) {
+    width: 162px;
+    font-size: 22px;
+  }
 }
 .herro__text {
   font-family: Titan One;
@@ -42,6 +49,10 @@
   line-height: 0.96;
   text-align: left;
   color: $accentColor;
+
+  @include mq(tablet) {
+    font-size: 34px;
+  }
 }
 .herro__first-btn {
   display: inline-block;
@@ -68,6 +79,7 @@
   font-size: 8px;
   line-height: 1.25;
   text-align: center;
+  margin-left: 8px;
 }
 
 .herro__img {
@@ -77,10 +89,10 @@
   z-index: 2;
   @include mq(tablet) {
     width: 143px;
-    // height: 336px;
-    // top: 80px;
+    height: 336px;
+
+    top: 65px;
     right: 303px;
-    bottom: 0px;
   }
 }
 .ice-cream__background {
@@ -95,6 +107,8 @@
   z-index: 1;
 
   @include mq(tablet) {
+    width: 335px;
+    height: 333px;
     right: 185px;
     top: 43px;
   }
@@ -102,12 +116,12 @@
 
 .herro__milk {
   display: none;
+
   @include mq(tablet) {
     display: block;
     margin-top: 20px;
     position: relative;
-    // bottom: 16px;
-    // left: 15px;
+    top: 20px;
   }
 }
 .milk-container {
@@ -146,5 +160,19 @@
 .herro__woman {
   position: absolute;
   right: 32px;
-  bottom: 0px;
+  bottom: -7px;
+  z-index: 3;
+}
+.number-text {
+  font-family: Titan One;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: right;
+  letter-spacing: 0.04em;
+  color: $accentColor;
+}
+.number-container {
+  position: relative;
+  top: 94px;
+  right: 42px;
 }
