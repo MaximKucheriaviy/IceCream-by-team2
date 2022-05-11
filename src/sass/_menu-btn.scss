@@ -21,27 +21,22 @@
 
 }
 
-
-
-
 .menu-btn-open{
+    top: 27px;
+    right: 20px;
+    z-index: 2;
 
     display: block;
-        width: 20px;
-        height: 12px;
-        background-color: transparent;
-        border: transparent;
-        outline: transparent;
-        stroke: $accentColor;
-        position: absolute;
-        top: 27px;
-        right: 20px;
-        outline: none;
-        z-index: 2;
+    width: 20px;
+    height: 12px;
+
+    background-color: transparent;
+    border: transparent;
+    outline: transparent;
+    stroke: $accentColor;
    
-        @include mq(tablet) {
-            top: 46px;
-            right: 224px;
-        }
-    
+    @include mq(tablet) {
+        top: 46px;
+        right: 224px;
+    }
 }
