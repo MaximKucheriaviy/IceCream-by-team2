@@ -7,5 +7,68 @@
 .header__link{
     display: inline-block;
     padding-top: 8px;
+
+    @include mq(tablet) {
+        padding: 0;
+        margin-right: 354px;
+            
+    }
 }
 
+.header_nav{
+    margin: 0;
+    padding: 0;
+    
+    
+
+    @include mq(tablet){
+        margin-top: 32px;
+        display: flex;
+        
+    }
+    
+    
+}
+
+
+
+
+.mobile__button-nav{
+    display: none;
+    
+    @include mq(tablet) {
+        display: flex;
+        
+            justify-content: center;
+            align-items: center;
+        
+        
+            width: 160px;
+            height: 44px;
+            border-radius: 22px;
+            background-color: #FFFFFF;
+            border: none;
+        
+        
+            & svg {
+                display: flex;
+        
+                justify-content: center;
+                align-items: center;
+                margin-left: 16px;
+                stroke: $accentColor;
+        
+        
+                & use {
+                    display: block;
+                }
+            }
+           
+        }
+   
+    
+
+
+
+
+}
