@@ -24,6 +24,19 @@
         text-align: center;
         text-transform: uppercase;
         }
+
+        @include mq(desktop) {
+        font-family: 'Titan One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 34px;
+            text-align: center;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding-top: 60px;
+            color: #FFA5BA;
+        }
 }
 
 .products-name{
@@ -49,6 +62,19 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
     }
+
+        @include mq(desktop) {
+    font-family: 'Titan One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 58px;
+        line-height: 66px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-align: center;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+}
 }
 
 
@@ -66,6 +92,13 @@
     margin-right: 16px;
     margin-bottom: 60px;
         }
+
+    @include mq(desktop) {
+        width: 395px;
+        height: 535px;
+        margin-right: 32px;
+        margin-bottom: 60px;
+}
 }
 
 .products__ice-coffee__background{
@@ -82,6 +115,13 @@
             margin-right: 16px;
             margin-bottom: 60px;
         }
+
+                @include mq(desktop) {
+                    width: 395px;
+                    height: 535px;
+                    margin-right: 32px;
+                    margin-bottom: 60px;
+                }
 }
 
 .products__milkshakes__background{
@@ -95,6 +135,11 @@
             width: 224px;
             height: 473px;
     }
+
+        @include mq(desktop) {
+            width: 395px;
+            height: 535px;
+        }
 }
 
 .ice-cream{
@@ -158,7 +203,34 @@
         letter-spacing: 0.04em;
         padding-left: 32px;
         padding-right: 32px;
+        display: none;
         }
+}
+
+.ice__second__text{
+    font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 176%;
+        padding-top: 100px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: #FFFFFF;
+        display: none;
+
+        @include mq(tablet) {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 176%;
+                text-align: center;
+                letter-spacing: 0.04em;
+                padding-left: 32px;
+                padding-right: 32px;
+                display: block;
+            }
 }
 
 .products__ice-cream__background{
@@ -222,6 +294,11 @@ align-items: center;
 justify-content: center;
 & svg{
     fill: $accentColor;
+}
+
+@include mq(tablet) {
+left: 40%;
+    transform: translateY(55%);
 }
 }
 
