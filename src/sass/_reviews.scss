@@ -1,4 +1,5 @@
 // В этом файле работает Алексей
+
 .reviews__item {
     width: 100%;
     display: flex;
@@ -6,12 +7,19 @@
     align-items: center;
     justify-content: center;
     padding-top: 80px;
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         padding-top: 121px;
         padding-left: 40px;
         padding-right: 40px;
     }
+    @include mq(desktop) {
+        padding-top: 123px;
+        padding-left: 92px;
+        padding-right: 92px;
+    }
 }
+
+
 .reviews__photo {
     width: 85px;
     height: 85px;
@@ -38,11 +46,17 @@
             width: 280px;
         }
 
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         margin-top: 19px;
         height: 164px;
         padding-top: 47px;
         padding-bottom: 34px;
+    }
+    @include mq(desktop) {
+        margin-top: 15px;
+        height: 138px;
+        padding-top: 47px;
+        padding-bottom: 28px;
     }
 }
 
@@ -57,8 +71,11 @@
         background-image: repeating-linear-gradient(180deg, transparent 1px, transparent 30px, #e1e1e1 31px);
     
     }
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         width: 500px;
+    }
+    @include mq(desktop) {
+        width: 813px;
     }
 }
 
@@ -69,12 +86,18 @@
     width: 157px;
     height: 248px;
     z-index: 3;
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         width: 460px;
         height: 93px;
         font-size: 14px;
         line-height: 2.16;
         letter-spacing: 0.04em;
+    }
+    @include mq(desktop) {
+        width: 750px;
+        height: 52px;
+        font-size: 16px;
+        line-height: 1.86;
     }
 }
 
@@ -96,7 +119,72 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 1.86;
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         margin-top: 24px;
     }
+    @include mq(desktop) {
+        margin-top: 34px;
+    }
 }
+.reviews__text::before {
+    content: "• • •";
+    display: block;
+    color: #C7133E;
+}
+.slick-dots {
+    margin-bottom: 40px;
+    
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-top: 30px;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+
+    display: inline-block;
+    margin: auto;
+    border-radius: 50%;
+
+    width: 12px;
+    height: 12px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    //background: transparent;
+}
+.slick-dots li.slick-active {
+    width: 12px;
+    height: 12px;
+    top: 4px;
+    background-image: url(../../src\images\Frame.svg);
+}
+.slick-dots li.slick-active button {
+    background: transparent;
+    z-index: -1;
+}
+
+
+
+
