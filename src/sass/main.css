@@ -45,7 +45,8 @@ body {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -177,14 +178,22 @@ body {
 .herro {
   width: 100%;
   height: 502px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: rgb(255, 184, 202);
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .herro {
+    height: 100%;
+  }
 }
 
 .herro__container {
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .herro__container {
+    height: 416px;
+  }
 }
 
 .title-container {
@@ -192,6 +201,11 @@ body {
   position: relative;
   z-index: 3;
   padding-top: 194px;
+}
+@media screen and (min-width: 768px) {
+  .title-container {
+    padding-top: 102px;
+  }
 }
 
 .herro__title {
@@ -206,6 +220,12 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 768px) {
+  .herro__title {
+    width: 162px;
+    font-size: 22px;
+  }
+}
 
 .herro__text {
   font-family: Titan One;
@@ -214,6 +234,11 @@ body {
   line-height: 0.96;
   text-align: left;
   color: #D41443;
+}
+@media screen and (min-width: 768px) {
+  .herro__text {
+    font-size: 34px;
+  }
 }
 
 .herro__first-btn {
@@ -237,11 +262,12 @@ body {
   background-color: #fff;
   border: none;
   border-radius: 20px;
-  font-family: DM Sans;
+  font-family: "DM Sans";
   font-weight: normal;
   font-size: 8px;
   line-height: 1.25;
   text-align: center;
+  margin-left: 8px;
 }
 
 .herro__img {
@@ -249,6 +275,14 @@ body {
   top: 92px;
   right: 32px;
   z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .herro__img {
+    width: 143px;
+    height: 336px;
+    top: 65px;
+    right: 303px;
+  }
 }
 
 .ice-cream__background {
@@ -261,6 +295,85 @@ body {
   border-radius: 50%;
   background-color: rgb(255, 165, 186);
   z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .ice-cream__background {
+    width: 335px;
+    height: 333px;
+    right: 185px;
+    top: 43px;
+  }
+}
+
+.herro__milk {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .herro__milk {
+    display: block;
+    margin-top: 20px;
+    position: relative;
+    top: 20px;
+  }
+}
+
+.milk-container {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .milk-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 184px;
+    bottom: 56px;
+    z-index: 3;
+  }
+}
+
+.milk__text {
+  width: 114px;
+  height: 48px;
+  font-family: "DM Sans";
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  color: #fff;
+}
+
+.milk__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  fill: #D41443;
+}
+
+.herro__woman {
+  position: absolute;
+  right: 32px;
+  bottom: -7px;
+  z-index: 3;
+}
+
+.number-text {
+  font-family: Titan One;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: right;
+  letter-spacing: 0.04em;
+  color: #D41443;
+}
+
+.number-container {
+  position: relative;
+  top: 94px;
+  right: 42px;
 }
 
 .products {
@@ -1344,14 +1457,7 @@ body {
 .mobile__button svg use {
   display: block;
 }
-@media screen and (min-width: 768px) {
-  .mobile__button {
-    width: 186px;
-    height: 44px;
-    margin-top: 58px;
-    margin-bottom: 34px;
-  }
-}
+
 
 .mobile__text {
   font-family: "DM Sans";
@@ -1418,4 +1524,5 @@ body {
     top: 46px;
     right: 224px;
   }
+
 }/*# sourceMappingURL=main.css.map */
