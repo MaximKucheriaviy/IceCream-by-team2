@@ -1,5 +1,6 @@
 // В этом файле работает Дима Шегельский
 .footer {
+    position: relative;
     padding-top: 24px;
 
     @include mq(tablet) {

@@ -1,6 +1,7 @@
 // В этом файле работает Даниил
 .contacts {
   // background-image: linear-gradient(to bottom, #ffffff 25%, #fff5f6 25%);
+  position: relative;
   padding-bottom: 24px;
   @include mq(tablet) {
     padding-bottom: 20px;
