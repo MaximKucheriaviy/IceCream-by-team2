@@ -272,7 +272,7 @@
   // position: relative;
   text-align: left;
   min-width: 320px;
-  height: 90vh;
+  height: 571px;
   max-width: none;
   // display: flex;
   // justify-content: center;
@@ -284,7 +284,7 @@
   @include mq(tablet) {
     padding: 40px;
     width: 528px;
-    // height: 581px;
+    height: 581px;
   }
 }
 .modal__cross--black {
@@ -293,12 +293,13 @@
   right: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: $fontWhite;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin: 8px 8px 2px 2px;
 
   transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -409,7 +410,7 @@
   line-height: 1.16;
 
   @include mq(desktop) {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.17;
   }
 
@@ -470,4 +471,3 @@
   color: red;
   background-color: white;
 }
-
