@@ -1,12 +1,12 @@
 // В этом файле работает Даниил
 .contacts {
-  background-image: linear-gradient(to bottom, #ffffff 25%, #fff5f6 25%);
-  margin-bottom: 40px;
+  // background-image: linear-gradient(to bottom, #ffffff 25%, #fff5f6 25%);
+  padding-bottom: 24px;
   @include mq(tablet) {
-    margin-bottom: 40px;
+    padding-bottom: 20px;
   }
   @include mq(desktop) {
-    margin-bottom: 120px;
+    padding-bottom: 60px;
   }
   &-container {
     padding-left: 16px;
@@ -191,6 +191,7 @@
 .button-contacts {
   display: flex;
   align-items: center;
+
   border: none;
   border-radius: 22px;
   font-weight: 700;
@@ -266,8 +267,202 @@
 .contacts-button__icon--red {
   stroke: #f44336;
 }
-// .contacts-button__icon {
-//   width: 6x;
-//   height: 8px;
-//
-// }
+
+.contacts-modal {
+  // position: relative;
+  text-align: left;
+  min-width: 320px;
+  max-width: none;
+
+  font-family: 'DM Sans', sans-serif;
+  padding: 30px;
+
+  @include mq(tablet) {
+    padding: 40px;
+    width: 528px;
+    height: 581px;
+  }
+}
+.modal__cross--black {
+  stroke: black;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: $fontWhite;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 8px 8px 2px 2px;
+
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__cross--black:hover,
+.modal__cross--black:focus {
+  stroke: white;
+  background-color: $accentColor;
+}
+.modal-frame {
+  width: 320px;
+  height: 450px;
+  @include mq(tablet) {
+    width: 600px;
+  }
+}
+
+.modal-form__field {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-form_list {
+  margin-bottom: 30px;
+}
+
+.modal-form__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: black;
+  text-align: center;
+}
+
+.modal-form__label {
+  margin-bottom: 4px;
+}
+
+.modal-form__box {
+  position: relative;
+}
+
+.modal-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form__input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 2px;
+
+  width: 100%;
+  padding-left: 42px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 40px;
+}
+
+.modal-form__input:focus,
+.modal-form__input:hover {
+  border: 1px solid $accentColor;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.modal-form__input:focus + .modal-form__icon {
+  fill: $accentColor;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.modal-form__textarea {
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form__textarea-input {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 2px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form__textarea-input:focus,
+.modal-form__textarea-input:hover {
+  border: 1px solid $accentColor;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.modal-form__label-condition {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.16;
+
+  @include mq(desktop) {
+    font-size: 14px;
+    line-height: 1.17;
+  }
+
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.modal-form__check-input {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.modal-form__check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #000000;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 8px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form__check-input:checked + .modal-form__check-icon {
+  background-color: $accentColor;
+
+  background-image: url(../images/check.svg);
+  background-size: cover;
+  background-origin: border-box;
+  border-color: $accentColor;
+  background-repeat: no-repeat;
+}
+
+.modal-form__check-input:focus + .modal-form__check-icon {
+  outline: 0;
+  outline-offset: 0;
+
+  border-color: $accentColor;
+}
+
+/* final check */
+
+/* button modal */
+.button-contacts--center {
+  display: flex;
+  padding: 10px 55px;
+  margin-left: auto;
+  margin-right: auto;
+
+  justify-content: center;
+}
+
+.button-contacts--center:hover,
+.button-contacts--center:focus {
+  color: red;
+  background-color: white;
+}
