@@ -12,23 +12,31 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
+    
+    @include mq(tablet) {
+            top: 20px;
+            right: 32px;
+        }
+
+
 }
 
-
-
-
 .menu-btn-open{
+    top: 27px;
+    right: 20px;
+    z-index: 2;
+
     display: block;
     width: 20px;
     height: 12px;
+
     background-color: transparent;
     border: transparent;
     outline: transparent;
     stroke: $accentColor;
-    position: absolute;
-    top: 27px;
-    right: 20px;
-    outline: none;
-    z-index: 2;
-
+   
+    @include mq(tablet) {
+        top: 46px;
+        right: 224px;
+    }
 }
