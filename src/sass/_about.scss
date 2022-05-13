@@ -1,13 +1,30 @@
 // В этом файле работает Паша
 
-// ABOUT
+// BACKGROUND-IMG
+
+.background-img-container {
+  @include mq(desktop) {
+    display: block;
+    margin: 0 auto;
+    max-width: 1280px;
+
+    background-image: url(../images/about/img/about-bg-img_lg.png);
+    background-position: 0 195px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    @include mq(retina) {
+      background-image: url(../images/about/img/about-bg-img_lg@2x.png);
+    }
+  }
+}
+
+// ABOUT SECTION
 
 .about {
   padding-top: 5px;
-  padding-bottom: 40px;
 
   background-color: #fff5f6;
-
   background-position: 0 574px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -23,16 +40,8 @@
   @include mq(tablet) {
     padding-top: 20px;
   }
-
   @include mq(desktop) {
     padding-top: 60px;
-
-    background-image: url(../images/about/img/about-bg-img_lg.png);
-    background-position: 0 255px;
-
-    @include mq(retina) {
-      background-image: url(../images/about/img/about-bg-img_lg@2x.png);
-    }
   }
 
   &__subtitle {
@@ -97,7 +106,6 @@
   // ABOUT CONTAINER
 
   &__container {
-    // outline: 1px solid red;
     display: flex;
 
     @include mq(mobile-only) {
@@ -117,9 +125,15 @@
 
   &__img {
     width: 100%;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @include mq(mobile-only) {
       margin-bottom: 40px;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
     }
   }
 }
@@ -196,6 +210,12 @@
   }
 }
 
+// IS HIDDEN
+
+.is-hidden {
+  display: none;
+}
+
 // ABOUT BUTTON
 
 .about-btn {
@@ -216,6 +236,8 @@
   border-radius: 22px;
   border-color: transparent;
 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover,
   &:focus {
     background-color: #ecebeb;
@@ -230,70 +252,3 @@
     stroke: $accentColor;
   }
 }
-
-// ABOUT-LIST
-
-// .about-list {
-//   &__item::before {
-//     margin-bottom: 16px;
-//     content: '';
-//     display: block;
-
-//     height: 50px;
-//     background: transparent;
-//   }
-
-//   &__item:nth-child(1)::before {
-//     width: 33px;
-//     background-image: url(../images/about/icons/about-icon1.png);
-//   }
-//   &__item:nth-child(2)::before {
-//     width: 50px;
-//     background-image: url(../images/about/icons/about-icon2.png);
-//   }
-//   &__item:nth-child(3)::before {
-//     width: 44px;
-//     background-image: url(../images/about/icons/about-icon3.png);
-//   }
-
-//   &__item:not(:last-child) {
-//     margin-bottom: 32px;
-//   }
-//   &__descr-title {
-//     margin-bottom: 16px;
-
-//     font-family: 'Titan One';
-//     font-style: normal;
-
-//     font-size: 36px;
-//     line-height: 1.13;
-//     letter-spacing: 0.04em;
-//     text-transform: uppercase;
-
-//     color: $accentColor;
-//   }
-
-//   &__descr-title::before {
-//     margin-bottom: 16px;
-//     content: '';
-//     display: block;
-
-//     width: 33px;
-//     height: 50px;
-//     background-size: contain;
-//   }
-//   &__descr-title:nth-child(n):before {
-//     background-image: url(../images/about/icons/about-icon1.png);
-//   }
-//   &__descr-title:nth-child(n + 1):before {
-//     background-image: url(../images/about/icons/about-icon2.png);
-//   }
-//   &__descr-text {
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 12px;
-//     line-height: 1.7;
-
-//     color: $fontBlack;
-//   }
-// }
