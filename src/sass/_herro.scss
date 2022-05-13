@@ -1,4 +1,7 @@
 // В этом файле работает Дима Гончаров
+html {
+  scroll-behavior: smooth;
+}
 .herro {
   width: 100%;
 
@@ -61,7 +64,7 @@
     font-size: 58px;
   }
 }
-.herro__first-btn {
+.herro__first-link {
   display: inline-block;
   padding: 7px 14px;
   color: #fff;
@@ -73,13 +76,18 @@
   font-size: 8px;
   line-height: 1.25;
   text-align: center;
+  transition: background-color 250ms ease-in;
 
   @include mq(desktop) {
     padding: 11px 24px;
     font-size: 14px;
+    &:hover,
+    &:focus {
+      background-color: rgba(199, 19, 62, 1);
+    }
   }
 }
-.herro__second-btn {
+.herro__second-link {
   display: inline-block;
   padding: 7px 14px;
   color: $accentColor;
@@ -92,11 +100,16 @@
   line-height: 1.25;
   text-align: center;
   margin-left: 8px;
+  transition: background-color 250ms ease-in;
 
   @include mq(desktop) {
     padding: 11px 24px;
     font-size: 14px;
     margin-left: 12px;
+    &:hover,
+    &:focus {
+      background-color: rgba(236, 235, 235, 1);
+    }
   }
 }
 .herro__milk {
@@ -153,28 +166,28 @@
   border: none;
   border-radius: 50%;
   fill: $accentColor;
+  transition: transform 250ms ease-in;
+
   @include mq(desktop) {
     width: 26px;
     height: 26px;
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
   }
 }
-.herro__thumb-container {
+.herro__img {
   display: inline-block;
   position: absolute;
-  top: 92px;
+  bottom: 0;
   right: 32px;
   z-index: 2;
   @include mq(tablet) {
-    width: 143px;
-    height: 336px;
-    top: 83px;
     right: 303px;
   }
   @include mq(desktop) {
-    width: 236px;
-    height: 557px;
     right: 408px;
-    top: 108px;
   }
 }
 .ice-cream__background {
@@ -202,19 +215,17 @@
   }
 }
 
-.herro__thumb-woman {
+.herro__woman {
   display: none;
 
   @include mq(tablet) {
     display: block;
     position: absolute;
     right: 32px;
-    bottom: 1px;
+    bottom: 0px;
     z-index: 3;
   }
   @include mq(desktop) {
-    min-width: 304px;
-    min-height: 241px;
     right: 16px;
   }
 }
@@ -270,14 +281,14 @@
   line-height: 10px;
   text-align: right;
   color: $fontWhite;
-  &:not(last-child) {
-    margin-bottom: 18px;
-
-    @include mq(desktop) {
-      margin-bottom: 25px;
-    }
-  }
+  margin-top: 2px;
+  margin-bottom: 18px;
   @include mq(desktop) {
+    margin-bottom: 25px;
+    margin-top: 10px;
     font-size: 14px;
+  }
+  &:last-child {
+    margin-bottom: 0;
   }
 }
