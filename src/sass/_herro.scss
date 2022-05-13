@@ -180,14 +180,16 @@ html {
 .herro__img {
   display: inline-block;
   position: absolute;
-  bottom: 0;
+  top: 92px;
   right: 32px;
   z-index: 2;
   @include mq(tablet) {
     right: 303px;
+    top: 92px;
   }
   @include mq(desktop) {
     right: 408px;
+    top: 112px;
   }
 }
 .ice-cream__background {
